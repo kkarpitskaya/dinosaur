@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Динозавр Google - Платформер</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Анимированный фон -->
+    <div class="background-animation" id="backgroundAnimation"></div>
+    
+    <div class="game-wrapper">
+        <div class="ui-container">
+            <div class="score-container">
+                <div>Очки: <span id="score">0</span></div>
+                <div>Уровень: <span id="level">1</span></div>
+                <div class="lives">Жизни: <span id="lives">3</span></div>
+            </div>
+            <div class="controls">
+                <button id="startBtn">Старт</button>
+                <button id="pauseBtn" style="display: none;">Пауза</button>
+                <button id="restartBtn" style="display: none;">Заново</button>
+            </div>
+        </div>
+        
+        <div class="game-container">
+            <canvas id="gameCanvas"></canvas>
+            <div class="game-over" id="gameOverScreen">
+                <h2>Игра окончена!</h2>
+                <p>Ваш счет: <span id="finalScore">0</span></p>
+                <button id="restartGameBtn">Играть снова</button>
+            </div>
+            <div class="start-screen" id="startScreen">
+                <div class="start-screen-content">
+                    <h1>Динозавр Google</h1>
+                    <p class="subtitle">Платформер</p>
+                    
+                    <div class="instructions">
+                        <h2>Как играть:</h2>
+                        <p>• Используйте ПРОБЕЛ или СТРЕЛКУ ВВЕРХ для прыжка</p>
+                        <p>• Избегайте кактусов-препятствий</p>
+                        <p>• Каждые 50 очков повышается уровень сложности</p>
+                        <p>• У вас есть 3 жизни!</p>
+                    </div>
+                    
+                    <button id="startGameBtn">Начать игру</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/Player.js"></script>
+    <script src="js/Collision.js"></script>
+    <script src="js/InputHandler.js"></script>
+    <script src="js/Renderer.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
